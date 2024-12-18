@@ -11,6 +11,7 @@
 
 	<groupId>com.wjahatsyed.portfolio</groupId>
 	<artifactId>business-invoicing-platform</artifactId>
+	<name>Business Invoicing Platform</name>
 	<version>1.0.0</version>
 	<description>A platform for automating invoice generation and management.</description>
 

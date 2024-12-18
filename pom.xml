@@ -13,6 +13,7 @@
     <modules>
         <module>distributed-shopping-cart</module>
         <module>business-invoicing-platform</module>
+        <module>ai-career-mobility-tool</module>
     </modules>
 
     <properties>
