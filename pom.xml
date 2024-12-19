@@ -14,6 +14,7 @@
         <module>distributed-shopping-cart</module>
         <module>business-invoicing-platform</module>
         <module>ai-career-mobility-tool</module>
+        <module>workforce-management-system</module>
     </modules>
 
     <properties>
