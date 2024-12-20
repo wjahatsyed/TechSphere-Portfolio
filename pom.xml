@@ -13,7 +13,7 @@
     <modules>
         <module>distributed-shopping-cart</module>
         <module>business-invoicing-platform</module>
-        <module>ai-career-mobility-tool</module>
+        <module>ai-career-mobility-tool/backend</module>
         <module>workforce-management-system</module>
     </modules>
 
