@@ -22,3 +22,21 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+/ai-career-mobility-tool/backend/.gitattributes
+/business-invoicing-platform/.gitattributes
+/.idea/.gitignore
+/ai-career-mobility-tool/backend/.gitignore
+/ai-career-mobility-tool/frontend/.gitignore
+/business-invoicing-platform/.gitignore
+/workforce-management-system/.gitignore
+/.idea/compiler.xml
+/.idea/encodings.xml
+/.idea/jarRepositories.xml
+/.idea/misc.xml
+/ai-career-mobility-tool/backend/mvnw
+/business-invoicing-platform/mvnw
+/workforce-management-system/mvnw
+/ai-career-mobility-tool/backend/mvnw.cmd
+/business-invoicing-platform/mvnw.cmd
+/workforce-management-system/mvnw.cmd
+/.idea/uiDesigner.xml

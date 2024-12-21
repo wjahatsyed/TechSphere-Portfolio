@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addRecommendation } from '../../redux/slices/recommendationSlice';
+import { addRecommendationThunk } from '../../redux/slices/recommendationSlice';
 import { TextField, Button } from '@mui/material';
 
 const RecommendationForm = () => {
@@ -10,7 +10,7 @@ const RecommendationForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(addRecommendation({ title, details }));
+        dispatch(addRecommendationThunk({ title, details }));
         setTitle('');
         setDetails('');
     };
