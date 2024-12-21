@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import DashboardPage from './pages/DashboardPage';
+import EmployeesPage from './pages/EmployeesPage';
+import RolesPage from './pages/RolesPage';
+import RecommendationsPage from './pages/RecommendationsPage';
+import { CssBaseline, AppBar, Toolbar, Typography } from '@mui/material';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <CssBaseline />
+            <AppBar position="static">
+                <Toolbar>
+                    <Typography variant="h6" component="div">
+                        AI Career Mobility Tool
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+            <Routes>
+                <Route path="/" element={<DashboardPage />} />
+                <Route path="/employees" element={<EmployeesPage />} />
+                <Route path="/roles" element={<RolesPage />} />
+                <Route path="/recommendations" element={<RecommendationsPage />} />
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;
