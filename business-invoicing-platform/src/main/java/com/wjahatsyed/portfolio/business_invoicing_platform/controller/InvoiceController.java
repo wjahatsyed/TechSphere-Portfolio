@@ -3,6 +3,7 @@ package com.wjahatsyed.portfolio.business_invoicing_platform.controller;
 import com.itextpdf.text.DocumentException;
 import com.wjahatsyed.portfolio.business_invoicing_platform.model.Invoice;
 import com.wjahatsyed.portfolio.business_invoicing_platform.service.EmailService;
+import com.wjahatsyed.portfolio.business_invoicing_platform.service.InvoiceService;
 import com.wjahatsyed.portfolio.business_invoicing_platform.util.PdfGeneratorUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -18,6 +19,7 @@ public class InvoiceController {
 
     @Autowired
     private EmailService emailService;
+    private InvoiceService invoiceService;
 
     @PostMapping("/generate")
     public ResponseEntity<byte[]> generateInvoice(@RequestBody Invoice invoice) {
@@ -48,5 +50,11 @@ public class InvoiceController {
         } catch (Exception ex) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Email sending failed");
         }
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Invoice> getInvoice(@PathVariable Long id) {
+        Invoice invoice = invoiceService.getInvoiceById(id);
+        return ResponseEntity.ok(invoice);
     }
 }
