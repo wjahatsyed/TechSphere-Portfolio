@@ -20,7 +20,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>2022.0.4</version>
+				<version>2024.0.0</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -74,10 +74,21 @@
 			<artifactId>jakarta.mail-api</artifactId>
 			<version>2.0.0</version>
 		</dependency>
+		<!-- MySQL Database -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
+		</dependency>
 		<!-- Spring Data JPA -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<!-- Other Dependencies -->
