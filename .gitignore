@@ -40,3 +40,4 @@ replay_pid*
 /business-invoicing-platform/mvnw.cmd
 /workforce-management-system/mvnw.cmd
 /.idea/uiDesigner.xml
+/medi-track/backend/.gitattributes

@@ -1,12 +1,15 @@
-const reportWebVitals = onPerfEntry => {
+// Importing required functions from the 'web-vitals' library
+import { onCLS, onFID, onFCP, onLCP, onTTFB } from 'web-vitals';
+
+// Exporting the `reportWebVitals` function
+const reportWebVitals = (onPerfEntry) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(onPerfEntry);
-      getFID(onPerfEntry);
-      getFCP(onPerfEntry);
-      getLCP(onPerfEntry);
-      getTTFB(onPerfEntry);
-    });
+    // Registering performance metrics handlers
+    onCLS(onPerfEntry);
+    onFID(onPerfEntry);
+    onFCP(onPerfEntry);
+    onLCP(onPerfEntry);
+    onTTFB(onPerfEntry); // Corrected to use `onTTFB`
   }
 };
 

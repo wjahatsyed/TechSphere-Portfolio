@@ -31,7 +31,7 @@ const MedicineForm = ({ onAddMedicine }) => {
         <input
           type="number"
           value={medicine.quantity}
-          onChange={(e) => setMedicine({ ...medicine, quantity: e.target.value })}
+          onChange={(e) => setMedicine({ ...medicine, quantity: parseInt(e.target.value, 10) })}
           required
         />
       </label>
@@ -41,7 +41,7 @@ const MedicineForm = ({ onAddMedicine }) => {
           type="number"
           step="0.1"
           value={medicine.contentVolume}
-          onChange={(e) => setMedicine({ ...medicine, contentVolume: e.target.value })}
+          onChange={(e) => setMedicine({ ...medicine, contentVolume: parseFloat(e.target.value) })}
           required
         />
       </label>
